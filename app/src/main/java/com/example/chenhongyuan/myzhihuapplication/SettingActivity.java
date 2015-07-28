@@ -28,7 +28,10 @@ import javax.microedition.khronos.egl.EGLDisplay;
  */
 public class SettingActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener{
     CheckBoxPreference checkBoxPreference;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +46,17 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
                 return true;
             }
         });
+<<<<<<< HEAD
 
+=======
+//        checkBoxPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                Toast.makeText(SettingActivity.this, "Click apply_Wifi", Toast.LENGTH_LONG).show();
+//                return true;
+//            }
+//        });
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         EditTextPreference editTextPreference = (EditTextPreference)findPreference("number_edit");
         Log.e("EditText-initial", editTextPreference.toString());
         editTextPreference.setPositiveButtonText("好的");
@@ -55,7 +68,10 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
                 return true;
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         ListPreference listPreference = (ListPreference)findPreference("apply_department");
         Log.e("Department-initial", listPreference.toString());
         listPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -65,7 +81,10 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
                 return true;
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         RingtonePreference ringtonePreference = (RingtonePreference)findPreference("ring_key");
         Log.e("sound-initial", ringtonePreference.toString());
         ringtonePreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -75,7 +94,10 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
                 return true;
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         MultiSelectListPreference multiSelectListPreference = (MultiSelectListPreference)findPreference("apply_multiDepartment");
         multiSelectListPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -84,7 +106,10 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
                 return true;
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean cBox1 = sharedPreferences.getBoolean("apply_Wifi", false);
         if(cBox1){
@@ -98,6 +123,17 @@ public class SettingActivity extends PreferenceActivity implements Preference.On
         Log.e("Sound", sharedPreferences.getString("ring_key", ""));
         Set<String> multiDepart = new HashSet<String>();
         Log.e("muliti-department", sharedPreferences.getStringSet("apply_multiDepartment", multiDepart).toString());
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
     }
 
     @Override

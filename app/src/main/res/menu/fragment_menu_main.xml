@@ -2,7 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_attention"
+<<<<<<< HEAD
         android:icon="@mipmap/ic_subscribe"
+=======
+        android:icon="@mipmap/iconattention"
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         android:title="Attention"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"

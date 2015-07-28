@@ -35,7 +35,11 @@
             android:screenOrientation="portrait" />
         <activity android:name=".MainActivity"/>
         <activity
+<<<<<<< HEAD
             android:name=".EditorActivity"
+=======
+            android:name=".AuthorActivity"
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
             android:label="主编"></activity>
         <activity android:name=".EditorInfoActivity"
             android:label="主编资料"></activity>
@@ -44,7 +48,11 @@
         <activity android:name=".SettingActivity"/>
         <activity android:name=".IndexActivity"
                   android:label="知乎小报    "
+<<<<<<< HEAD
                   android:icon="@mipmap/ic_zhihu">
+=======
+                  android:icon="@mipmap/icon">
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

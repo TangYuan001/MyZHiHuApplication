@@ -8,7 +8,11 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_bell"
+<<<<<<< HEAD
         android:icon="@mipmap/ic_bell"
+=======
+        android:icon="@mipmap/iconbell"
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         android:title="Bell"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"/>

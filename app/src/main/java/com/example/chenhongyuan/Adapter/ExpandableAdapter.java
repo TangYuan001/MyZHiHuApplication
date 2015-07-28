@@ -1,5 +1,9 @@
 package com.example.chenhongyuan.Adapter;
 
+<<<<<<< HEAD
+=======
+import android.app.ExpandableListActivity;
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +13,18 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.example.chenhongyuan.Module.Comment;
+<<<<<<< HEAD
 import com.example.chenhongyuan.myzhihuapplication.R;
 import com.squareup.picasso.Picasso;
 
+=======
+import com.example.chenhongyuan.myzhihuapplication.CommentActivity;
+import com.example.chenhongyuan.myzhihuapplication.R;
+import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
+
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,12 +37,19 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     public List<List<Comment>> childData = new ArrayList<List<Comment>>();
     public List<String> groupData = new ArrayList<String>();
     public Context context;
+<<<<<<< HEAD
 
     public void setData(List<List<Comment>> childList, List<String> groupList, Context c) {
         childData = childList;
         groupData = groupList;
         context = c;
         notifyDataSetChanged();
+=======
+    public ExpandableAdapter (List<List<Comment>> childList, List<String> groupList, Context c) {
+        childData = childList;
+        groupData = groupList;
+        context = c;
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
     }
 
     @Override
@@ -46,20 +66,34 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         CommentViewHolder commentViewHolder;
         if(convertView == null){
+<<<<<<< HEAD
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comment, parent, false);
             commentViewHolder = new CommentViewHolder();
             commentViewHolder.commentPic = (CircleImageView)convertView.findViewById(R.id.image_comment);
             commentViewHolder.commentPerson = (TextView)convertView.findViewById(R.id.tv_comment_person);
             commentViewHolder.commentContent = (TextView)convertView.findViewById(R.id.tv_comment_content);
+=======
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.expandable_list_item, parent, false);
+            commentViewHolder = new CommentViewHolder();
+            commentViewHolder.commentPic = (CircleImageView)convertView.findViewById(R.id.comment_pic);
+            commentViewHolder.commentName = (TextView)convertView.findViewById(R.id.comment_name);
+            commentViewHolder.commentContent = (TextView)convertView.findViewById(R.id.comment_content);
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
             convertView.setTag(commentViewHolder);
         } else {
             commentViewHolder = (CommentViewHolder)convertView.getTag();
         }
+<<<<<<< HEAD
 
         Picasso.with(parent.getContext())
                 .load(childData.get(groupPosition).get(childPosition).avatar)
                 .into(commentViewHolder.commentPic);
         commentViewHolder.commentPerson.setText(childData.get(groupPosition).get(childPosition).author);
+=======
+        Picasso.with(parent.getContext()).load(childData.get(groupPosition).get(childPosition).avatar)
+                .into(commentViewHolder.commentPic);
+        commentViewHolder.commentName.setText(childData.get(groupPosition).get(childPosition).author);
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         commentViewHolder.commentContent.setText(childData.get(groupPosition).get(childPosition).content);
         return convertView;
     }
@@ -115,7 +149,11 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     }
     public class CommentViewHolder {
         CircleImageView commentPic;
+<<<<<<< HEAD
         TextView commentPerson;
+=======
+        TextView commentName;
+>>>>>>> c32c71a5a5cd2a9cee1e37970d4ddf21a3d036d5
         TextView commentContent;
     }
 
